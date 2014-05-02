@@ -4,8 +4,17 @@ require_once 'php-login-minimal/classes/Login.php';
 require_once 'php-login-minimal/classes/Registration.php';
 require_once 'php-login-minimal/config/db.php';
 
-$app->map('/', function () use ($app, $db) {
-    $login = new Login();
+$login = new Login();
+
+$authenticate = function ($login) {
+    return function () use ($login) {
+        if ( !$login->isUserLoggedIn()) {
+            $app = \Slim\Slim::getInstance();
+            $app->redirect('/');
+        }
+    };
+};
+$app->map('/', function () use ($app, $db, $login) {
     $app->render(
         'layout.php',
         array('app' => $app, 'view' => 'main', 'login' => $login)
@@ -19,3 +28,7 @@ $app->map('/register', function () use ($app, $db)  {
         array('app' => $app, 'view' => 'register', 'registration' => $registration)
     );
 })->via('GET', 'POST');
+
+$app->get('/list', $authenticate($login), function () use  ($app, $db)  {
+
+});
