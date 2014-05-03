@@ -36,7 +36,7 @@ if ($login->isUserLoggedIn() != true) {
 
 Hey, <?php echo $_SESSION['user_name']; ?>.
 <br/>
-<iframe src="http://91.210.106.63:8888/chat?username=<?php echo $_SESSION['user_name']; ?>&room=1" width="900" height="600" frameBorder="0"></iframe>
+
 <br/><a href="/?logout">Logout</a>
 
 <? } ?>
