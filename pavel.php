@@ -16,6 +16,26 @@ $app->get('/list', $authenticate($login), function () use ($app, $db, $login) {
     );
 });
 
+$app->get('/profile', $authenticate($login), function () use ($app, $db, $login) {
+    $app->redirect('/profile/' . $_SESSION['user_id']);
+});
+
+$app->get('/profile/:userid', $authenticate($login), function ($userid) use ($app, $db, $login) {
+    $query = $db->prepare('SELECT * '
+            . 'from users '
+            . 'where users.user_id= :userid');
+    $query->bindValue(':userid', $userid);
+    $query->execute();
+    $userData = $query->fetch(PDO::FETCH_ASSOC);
+
+    $app->render(
+            'layout.php', array('app' => $app,
+        'view' => 'profile',
+        'login' => $login,
+        'userData' => $userData)
+    );
+});
+
 $app->get('/error', $authenticate($login), function () use ($app, $db, $login) {
     die(var_dump($app->error));
 });

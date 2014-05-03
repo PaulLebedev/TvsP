@@ -1,1 +1,3 @@
-
+.u-block {float:left; margin:0 5px 5px 0; padding: 5px; border:2px solid #d3d3d3; border-radius:3px; width:210px;}
+.u-block-active {border:2px solid green; background:#ECFFEC}
+.u-block-waiting {height:73px; color:#666; text-align:center; padding-top:25px;}

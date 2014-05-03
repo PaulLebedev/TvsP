@@ -56,7 +56,7 @@
               <!-- when logged in -->
                 <p class="navbar-text navbar-right">
                     
-                    <a href="#" class="navbar-link"><?= $_SESSION["user_name"]; ?></a>&nbsp;
+                    <a href="/profile/<?= $_SESSION["user_id"] ?>" class="navbar-link"><?= $_SESSION["user_name"]; ?></a>&nbsp;
                     <span class="glyphicon glyphicon-envelope"></span>&nbsp;|&nbsp;
                     Exp: <span class="badge">0</span> Cha: <span class="badge">0</span>
                     &nbsp;|&nbsp;                                      

@@ -1,6 +1,6 @@
 <div class="container">
 <h1>About</h1>
-<img src="/img/luchnitsa.jpg" style="float:right; margin-right:250px" width="370" />
+<img src="/img/luchnitsa.jpg" style="float:right; margin-right:200px" width="370" />
 <h2>Применяемый стек технологий</h2>
 
 <h4>Backend:</h4>

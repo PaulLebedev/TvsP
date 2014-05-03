@@ -58,7 +58,7 @@
             <h2>Осталось:
                 <div id='countdown' style="display:inline"></div>
             </h2>
-            </div>
+
             <!--<button type="button" id="loading-example-btn" data-loading-text="I'm ready!" class="btn btn-success">
                 I'm ready!
             </button>-->
@@ -77,6 +77,7 @@
             <div id="tSol"></div>
             <? } ?>
             <br>
+            </div>
             <button type="button" class="btn btn-danger"
                     onclick='window.location="/leave-room?rid=<?= $room['rid'] ?>"'>Покинуть команду
             </button>
@@ -93,7 +94,7 @@
                         ?>
                         <div class="userBadge media u-block /* u-block-active */">
                             <a class="pull-left" href="#">
-                                <img class="media-object" src="http://forum.cosmo.ru/uploads/av-343732.jpg" width="64"
+                                <img class="media-object" src="img/golova.jpg" width="64"
                                      height="64"
                                      alt="">
                             </a>
@@ -149,7 +150,7 @@
                     Отметьте участников, которые на ваш взгляд внесли максимальный вклад в решение задачи
                     <div style="clear:both;">
                         <div class="media u-block-modal">
-                            <img class="media-object pull-left" src="http://forum.cosmo.ru/uploads/av-343732.jpg" width="64" height="64"  alt="">
+                            <img class="media-object pull-left" src="img/golova.jpg" width="64" height="64"  alt="">
                             <div class="media-body">
                                 <span class="media-heading"><strong>zavg</strong></span><br>
                                 <small>Exp: 0 | Cha: 0 <br> <span class="label label-info">Ling</span></small>
@@ -158,7 +159,7 @@
                     </div>
 
                     <div class="media u-block-modal u-block-active">
-                        <img class="media-object pull-left" src="http://forum.cosmo.ru/uploads/av-343732.jpg" width="64" height="64"  alt="">
+                        <img class="media-object pull-left" src="img/golova.jpg" width="64" height="64"  alt="">
                         <div class="media-body">
                             <span class="media-heading"><strong>OT4E</strong></span><br>
                             <small>Exp: 0 | Cha: 0 <br> <span class="label label-info">IT</span></small>
@@ -167,7 +168,7 @@
                 </div>
                 <div style="clear:both;"></div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">ОК</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.location='/profile/<?= $viewer_id?> '">ОК</button>
 
                 </div>
             </div>

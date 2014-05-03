@@ -93,12 +93,12 @@
                         <?php else: ?>
                             <tr>
                                 <th style="width: 30px">ID</th>
-                                <th>Task name</th>
+                                <th>Задача</th>
                                 <!--<th style="width: 120px">Specialization</th>-->
-                                <th style="width: 140px">Participants</th>
-                                <th style="width: 100px">Task rating</th>
-                                <th style="width: 90px">Task cost</th>
-                                <th style="width: 70px">Mode</th>
+                                <th style="width: 140px">Участники</th>
+                                <th style="width: 100px">Рейтинг</th>
+                                <th style="width: 90px">Стоимость</th>
+                                <th style="width: 70px">Сложность</th>
                             </tr>
                             <?php foreach ($rooms as $room) : ?>                        
                                 <tr>
